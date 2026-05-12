@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url><loc>index.html</loc></url>
-  <url><loc>about.html</loc></url>
-  <url><loc>issues.html</loc></url>
-  <url><loc>solutions.html</loc></url>
-  <url><loc>quotes.html</loc></url>
-  <url><loc>contact.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/index.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/about.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/issues.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/solutions.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/quotes.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/donation.html</loc></url>
+  <url><loc>https://dong0777.github.io/dharmajagaran-uttarbanga/contact.html</loc></url>
 
 </urlset>
