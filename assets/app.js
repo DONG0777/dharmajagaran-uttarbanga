@@ -10,10 +10,22 @@ if ("serviceWorker" in navigator) {
 // Mobile Menu Toggle
 function toggleMenu() {
   const nav = document.getElementById("mobileNav");
-  nav.classList.toggle("open");
+  if (nav) nav.classList.toggle("open");
 }
 
-// Install Button System
+// Auto close menu on click (mobile)
+document.addEventListener("click", function (e) {
+  const nav = document.getElementById("mobileNav");
+  const btn = document.querySelector(".menu-btn");
+
+  if (!nav || !btn) return;
+
+  if (!nav.contains(e.target) && !btn.contains(e.target)) {
+    nav.classList.remove("open");
+  }
+});
+
+// PWA Install System
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", (e) => {
@@ -31,6 +43,7 @@ async function installApp() {
 
   deferredPrompt.prompt();
   await deferredPrompt.userChoice;
+
   deferredPrompt = null;
 
   const installBox = document.getElementById("installBox");
