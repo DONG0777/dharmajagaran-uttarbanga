@@ -7,11 +7,34 @@ if ("serviceWorker" in navigator) {
   });
 }
 
-// PWA Install Button (optional future use)
+// Mobile Menu Toggle
+function toggleMenu() {
+  const nav = document.getElementById("mobileNav");
+  nav.classList.toggle("open");
+}
+
+// Install Button System
 let deferredPrompt;
 
 window.addEventListener("beforeinstallprompt", (e) => {
   e.preventDefault();
   deferredPrompt = e;
-  console.log("PWA install prompt ready");
+
+  const installBox = document.getElementById("installBox");
+  if (installBox) {
+    installBox.style.display = "block";
+  }
 });
+
+async function installApp() {
+  if (!deferredPrompt) return;
+
+  deferredPrompt.prompt();
+  await deferredPrompt.userChoice;
+  deferredPrompt = null;
+
+  const installBox = document.getElementById("installBox");
+  if (installBox) {
+    installBox.style.display = "none";
+  }
+}
