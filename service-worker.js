@@ -1,16 +1,21 @@
-const CACHE_NAME = "djuttarbanga-v1";
+const CACHE_NAME = "djuttarbanga-cache-v2";
 
 const urlsToCache = [
-  "index.html",
-  "about.html",
-  "issues.html",
-  "solutions.html",
-  "quotes.html",
-  "contact.html",
-  "offline.html",
-  "assets/style.css",
-  "assets/app.js",
-  "manifest.json"
+  "/dharmajagaran-uttarbanga/",
+  "/dharmajagaran-uttarbanga/index.html",
+  "/dharmajagaran-uttarbanga/about.html",
+  "/dharmajagaran-uttarbanga/issues.html",
+  "/dharmajagaran-uttarbanga/solutions.html",
+  "/dharmajagaran-uttarbanga/quotes.html",
+  "/dharmajagaran-uttarbanga/donation.html",
+  "/dharmajagaran-uttarbanga/contact.html",
+  "/dharmajagaran-uttarbanga/offline.html",
+  "/dharmajagaran-uttarbanga/manifest.json",
+  "/dharmajagaran-uttarbanga/assets/style.css",
+  "/dharmajagaran-uttarbanga/assets/app.js",
+  "/dharmajagaran-uttarbanga/assets/upi-qr.png",
+  "/dharmajagaran-uttarbanga/assets/icons/icon-192.png",
+  "/dharmajagaran-uttarbanga/assets/icons/icon-512.png"
 ];
 
 self.addEventListener("install", (event) => {
@@ -21,8 +26,12 @@ self.addEventListener("install", (event) => {
 
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request).then((res) => {
-      return res || caches.match("offline.html");
-    }))
+    fetch(event.request).then((response) => {
+      return response;
+    }).catch(() => {
+      return caches.match(event.request).then((cachedResponse) => {
+        return cachedResponse || caches.match("/dharmajagaran-uttarbanga/offline.html");
+      });
+    })
   );
 });
