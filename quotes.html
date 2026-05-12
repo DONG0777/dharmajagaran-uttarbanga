@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>মহাপুরুষদের বাণী | ধর্মজাগরণ সমন্বয়, উত্তরবঙ্গ</title>
+  <meta name="description" content="স্বামী বিবেকানন্দ, আম্বেদকর, সাভারকর সহ মহাপুরুষদের বাণী এবং সমাজ সচেতনতার বার্তা।" />
 
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#f57c00" />
+  <meta name="theme-color" content="#ff7a00" />
 </head>
 
 <body>
@@ -18,45 +20,137 @@
         <h1>ধর্মজাগরণ সমন্বয়</h1>
         <p>উত্তরবঙ্গ</p>
       </div>
+
+      <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
     </div>
 
+    <!-- Desktop Menu -->
     <nav class="nav">
       <a href="index.html">Home</a>
       <a href="about.html">পরিচয়</a>
       <a href="issues.html">সমস্যা</a>
       <a href="solutions.html">করণীয়</a>
       <a class="active" href="quotes.html">বাণী</a>
+      <a href="donation.html">ডোনেশন</a>
+      <a href="contact.html">যোগাযোগ</a>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav id="mobileNav" class="mobile-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">পরিচয়</a>
+      <a href="issues.html">সমস্যা</a>
+      <a href="solutions.html">করণীয়</a>
+      <a class="active" href="quotes.html">বাণী</a>
+      <a href="donation.html">ডোনেশন</a>
       <a href="contact.html">যোগাযোগ</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="page-title">
-      <h2>!! মহাপুরুষদের বাণী !!</h2>
-      <p>দেশ ও সমাজের প্রতি সতর্কবার্তা</p>
+      <h2>মহাপুরুষদের বাণী</h2>
+      <p>যারা ইতিহাস বদলেছেন, তারা সমাজকে সতর্ক করে গেছেন</p>
     </section>
 
     <section class="card">
+      <h3>প্রেরণাদায়ক বাণী</h3>
+
       <blockquote>
-        <p>স্বামী বিবেকানন্দঃ "একজন হিন্দু খ্রিস্টান ধর্ম গ্রহণ করলে, শুধুমাত্র একজন হিন্দুর সংখ্যাই কমে না, বরং একজন শত্রুরও বৃদ্ধি হয়।"</p>
+        <p>
+          “একজন হিন্দু খ্রিস্টান ধর্ম গ্রহণ করলে, শুধুমাত্র একজন হিন্দুর সংখ্যাই কমে না,
+          বরং একজন শত্রুরও বৃদ্ধি হয়।”
+        </p>
+        <p><b>— স্বামী বিবেকানন্দ</b></p>
       </blockquote>
 
       <blockquote>
-        <p>বাবা সাহেব আম্বেদকরঃ "এটি একটি নির্মম সত্য যে, একজন খ্রিস্টান হয়ে গেলে (অরাষ্ট্রীয়) ভিন্ন জাতিতে পরিণত হয়।"</p>
+        <p>
+          “এটি একটি নির্মম সত্য যে, একজন খ্রিস্টান হয়ে গেলে (অরাষ্ট্রীয়) ভিন্ন জাতিতে পরিণত হয়।”
+        </p>
+        <p><b>— ডঃ ভীমরাও আম্বেদকর</b></p>
       </blockquote>
 
       <blockquote>
-        <p>বীর সাভারকরঃ "ধর্ম পরিবর্তন মানেই জাতীয়তার পরিবর্তন।"</p>
+        <p>
+          “ধর্ম পরিবর্তন মানেই জাতীয়তার পরিবর্তন।”
+        </p>
+        <p><b>— বীর সাভারকর</b></p>
       </blockquote>
 
       <blockquote>
-        <p>আচার্য তুলসী (শ্বেতাম্বর জৈন তেরাপন্থ)ঃ "ধর্মান্তর দেশের অখণ্ডতার জন্য বিপজ্জনক।"</p>
+        <p>
+          “ধর্মান্তর দেশের অখণ্ডতার জন্য বিপজ্জনক।”
+        </p>
+        <p><b>— আচার্য তুলসী (শ্বেতাম্বর জৈন তেরাপন্থ)</b></p>
       </blockquote>
     </section>
+
+    <section class="card">
+      <h3>সচেতনতার বার্তা</h3>
+      <p>
+        সমাজকে রক্ষা করতে হলে কেবল আবেগ নয়—প্রয়োজন তথ্য, ঐক্য এবং শৃঙ্খলা।
+        ইতিহাস আমাদের বারবার সতর্ক করেছে, কিন্তু আমরা অনেক সময় বুঝেও বুঝি না।
+      </p>
+
+      <blockquote>
+        <p>
+          “সংখ্যা যখন বদলায়, তখন ক্ষমতা বদলায়।  
+          ক্ষমতা বদলালে, সমাজ ও রাষ্ট্র বদলে যায়।”
+        </p>
+        <p><b>— বাস্তব শিক্ষা (সমাজ পর্যবেক্ষণ)</b></p>
+      </blockquote>
+
+      <blockquote>
+        <p>
+          “সচেতন সমাজই নিরাপদ সমাজ।  
+          ঘুমন্ত সমাজই শিকার হয়।”
+        </p>
+        <p><b>— সংগঠনের মূল বার্তা</b></p>
+      </blockquote>
+    </section>
+
+    <section class="grid">
+      <div class="mini-card">
+        <h4>🔥 লক্ষ্য</h4>
+        <p>
+          এই বাণীগুলি সমাজকে সচেতন করার জন্য। কারণ ইতিহাস শুধু পড়ার বিষয় নয়,
+          ইতিহাস সতর্ক করার বিষয়।
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <h4>🛡️ শিক্ষা</h4>
+        <p>
+          ধর্ম ও সংস্কৃতিকে রক্ষা করতে হলে প্রথমে নিজের সমাজকে শক্তিশালী করতে হবে।
+        </p>
+      </div>
+
+      <div class="mini-card">
+        <h4>🤝 বার্তা</h4>
+        <p>
+          একতা, শৃঙ্খলা ও সেবাই সমাজকে টিকিয়ে রাখে।
+        </p>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>আপনি কি এই বার্তা ছড়াতে চান?</h3>
+      <p>
+        এই বাণীগুলি আপনার বন্ধু ও পরিবারের কাছে পৌঁছে দিন।  
+        সচেতনতা ছড়ানোই এখন সবচেয়ে বড় কাজ।
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn" href="issues.html">সমস্যা পড়ুন</a>
+        <a class="btn outline" href="solutions.html">করণীয় দেখুন</a>
+      </div>
+    </section>
+
   </main>
 
   <footer class="footer">
-    <p>© ধর্মজাগরণ সমন্বয়, উত্তরবঙ্গ</p>
+    <p>© ধর্মজাগরণ সমন্বয়, উত্তরবঙ্গ | Quotes Page</p>
   </footer>
 
   <script src="assets/app.js"></script>
