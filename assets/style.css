@@ -1,4 +1,328 @@
 /* ================================
+   DJ UTTARBANGA - MAIN STYLE
+   Professional Responsive PWA UI
+================================ */
+
+:root {
+  --bg: #0b0b0b;
+  --card: rgba(255, 255, 255, 0.06);
+  --text: rgba(255, 255, 255, 0.92);
+  --muted: rgba(255, 255, 255, 0.75);
+
+  --accent: #ff7a00;
+  --accent2: #ffb300;
+
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 14px 35px rgba(0, 0, 0, 0.6);
+
+  --radius: 22px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, rgba(255, 122, 0, 0.14), transparent 55%),
+              radial-gradient(circle at bottom, rgba(255, 179, 0, 0.10), transparent 60%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  min-height: 100vh;
+}
+
+/* ================================
+   LINKS
+================================ */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================================
+   TOPBAR / HEADER
+================================ */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  padding: 12px 14px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 30px;
+  padding: 8px 10px;
+  border-radius: 16px;
+  background: rgba(255, 122, 0, 0.14);
+  border: 1px solid rgba(255, 122, 0, 0.22);
+}
+
+.brand-text h1 {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.brand-text p {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: -2px;
+}
+
+/* Menu button */
+.menu-btn {
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.06);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* Desktop Nav */
+.nav {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nav a {
+  padding: 10px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  font-size: 13px;
+  font-weight: 900;
+  opacity: 0.9;
+  transition: 0.2s ease;
+}
+
+.nav a:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 122, 0, 0.14);
+  border-color: rgba(255, 122, 0, 0.35);
+}
+
+.nav a.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #111;
+  border: none;
+}
+
+/* Mobile Nav */
+.mobile-nav {
+  display: none;
+  margin-top: 10px;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mobile-nav a {
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.03);
+  font-weight: 900;
+}
+
+.mobile-nav a.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #111;
+  border: none;
+}
+
+/* ================================
+   CONTAINER
+================================ */
+.container {
+  width: min(980px, 92%);
+  margin: 18px auto;
+  padding-bottom: 30px;
+}
+
+/* ================================
+   PAGE TITLE
+================================ */
+.page-title {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.page-title h2 {
+  font-size: 26px;
+  font-weight: 1000;
+}
+
+.page-title p {
+  margin-top: 6px;
+  font-size: 14px;
+  opacity: 0.78;
+}
+
+/* ================================
+   CARDS
+================================ */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  margin-bottom: 16px;
+}
+
+.card h3 {
+  font-size: 20px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  color: var(--accent2);
+}
+
+.card p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.card ul {
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+.card ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ================================
+   GRID / MINI CARDS
+================================ */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.mini-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 20px;
+  padding: 14px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.mini-card h4 {
+  font-size: 16px;
+  font-weight: 1000;
+  margin-bottom: 8px;
+  color: var(--accent2);
+}
+
+.mini-card p {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+/* ================================
+   BUTTONS
+================================ */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-weight: 1000;
+  font-size: 14px;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #111;
+  transition: 0.2s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+.btn.outline {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: white;
+}
+
+.btn.outline:hover {
+  background: rgba(255, 122, 0, 0.12);
+  border-color: rgba(255, 122, 0, 0.35);
+}
+
+/* ================================
+   BLOCKQUOTE
+================================ */
+blockquote {
+  margin-top: 12px;
+  padding: 14px;
+  border-left: 4px solid var(--accent);
+  background: rgba(255,255,255,0.03);
+  border-radius: 18px;
+}
+
+blockquote p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* ================================
+   CONTACT BOX
+================================ */
+.contact-box {
+  background: rgba(0,0,0,0.30);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 14px;
+  margin-top: 12px;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* ================================
+   FOOTER
+================================ */
+.footer {
+  text-align: center;
+  padding: 18px 12px;
+  opacity: 0.65;
+  font-size: 12px;
+}
+
+/* ================================
    DONATION PAGE (UPI QR PRO STYLE)
 ================================ */
 
@@ -115,7 +439,82 @@
   opacity: 0.7;
 }
 
-/* Mobile Fine Tuning */
+/* ================================
+   BOTTOM NAVIGATION (APP STYLE)
+================================ */
+.bottom-nav {
+  position: fixed;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(720px, 92%);
+  background: rgba(10, 10, 10, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 10px 12px;
+  display: none;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 9999;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.55);
+}
+
+.bottom-nav a {
+  flex: 1;
+  text-align: center;
+  padding: 10px 6px;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.78);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.2s ease;
+}
+
+.bottom-nav a span {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 2px;
+}
+
+.bottom-nav a.active {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  color: #111;
+  border: none;
+}
+
+.bottom-nav a:hover {
+  transform: translateY(-2px);
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 850px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: flex;
+  }
+
+  body {
+    padding-bottom: 95px;
+  }
+}
+
 @media (max-width: 500px) {
   .merchant-name {
     font-size: 16px;
