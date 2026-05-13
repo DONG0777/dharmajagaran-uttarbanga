@@ -1,36 +1,33 @@
-const CACHE_NAME = "djuttarbanga-cache-v1";
+const CACHE_NAME = "dharmajagaran-v1";
 
-const urlsToCache = [
+const FILES_TO_CACHE = [
   "/dharmajagaran-uttarbanga/",
   "/dharmajagaran-uttarbanga/index.html",
   "/dharmajagaran-uttarbanga/about.html",
   "/dharmajagaran-uttarbanga/issues.html",
-  "/dharmajagaran-uttarbanga/solutions.html",
-  "/dharmajagaran-uttarbanga/quotes.html",
   "/dharmajagaran-uttarbanga/donation.html",
   "/dharmajagaran-uttarbanga/contact.html",
-  "/dharmajagaran-uttarbanga/offline.html",
+
+  "/dharmajagaran-uttarbanga/manifest.json",
 
   "/dharmajagaran-uttarbanga/assets/style.css",
-  "/dharmajagaran-uttarbanga/assets/app.js",
+  "/dharmajagaran-uttarbanga/assets/upi-qr.webp",
 
-  "/dharmajagaran-uttarbanga/assets/icons/icon-192.png",
-  "/dharmajagaran-uttarbanga/assets/icons/icon-512.png",
-
-  "/dharmajagaran-uttarbanga/assets/upi-qr.png"
+  "/dharmajagaran-uttarbanga/assets/icon-192.png",
+  "/dharmajagaran-uttarbanga/assets/icon-512.png"
 ];
 
-// INSTALL
+// Install event
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      return cache.addAll(urlsToCache);
+      return cache.addAll(FILES_TO_CACHE);
     })
   );
   self.skipWaiting();
 });
 
-// ACTIVATE
+// Activate event
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys().then((keys) => {
@@ -46,17 +43,22 @@ self.addEventListener("activate", (event) => {
   self.clients.claim();
 });
 
-// FETCH
+// Fetch event (Cache First Strategy)
 self.addEventListener("fetch", (event) => {
   event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        return response;
-      })
-      .catch(() => {
-        return caches.match(event.request).then((res) => {
-          return res || caches.match("/dharmajagaran-uttarbanga/offline.html");
-        });
-      })
+    caches.match(event.request).then((cachedResponse) => {
+      return (
+        cachedResponse ||
+        fetch(event.request).then((networkResponse) => {
+          return caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        }).catch(() => {
+          // fallback: return homepage if offline
+          return caches.match("/dharmajagaran-uttarbanga/index.html");
+        })
+      );
+    })
   );
 });
