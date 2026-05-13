@@ -1,138 +1,164 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>ধর্মজাগরণ সমন্বয়, উত্তরবঙ্গ</title>
-  <meta name="description" content="ধর্মজাগরণ সমন্বয়, উত্তরবঙ্গ — জাগো এবং জাগাও। মতান্তরণ, জনসংখ্যা আক্রমণ এবং সাংস্কৃতিক সুরক্ষা বিষয়ে তথ্যভিত্তিক প্ল্যাটফর্ম।" />
-
-  <link rel="stylesheet" href="assets/style.css" />
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#ff7a00" />
-
-  <link rel="icon" href="assets/icons/icon-192.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharma Jagaran UttarBanga</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <div class="logo">🕉️</div>
-      <div class="brand-text">
-        <h1>ধর্মজাগরণ সমন্বয়</h1>
-        <p>উত্তরবঙ্গ</p>
-      </div>
 
-      <button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
-    </div>
-
-    <!-- Desktop Menu -->
-    <nav class="nav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">পরিচয়</a>
-      <a href="issues.html">সমস্যা</a>
-      <a href="solutions.html">করণীয়</a>
-      <a href="quotes.html">বাণী</a>
-      <a href="donation.html">ডোনেশন</a>
-      <a href="contact.html">যোগাযোগ</a>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <nav id="mobileNav" class="mobile-nav">
-      <a class="active" href="index.html">Home</a>
-      <a href="about.html">পরিচয়</a>
-      <a href="issues.html">সমস্যা</a>
-      <a href="solutions.html">করণীয়</a>
-      <a href="quotes.html">বাণী</a>
-      <a href="donation.html">ডোনেশন</a>
-      <a href="contact.html">যোগাযোগ</a>
-    </nav>
+  <!-- Top Header -->
+  <header class="donation-header">
+    <a href="index.html" class="back-btn" style="opacity:0.6; pointer-events:none;">🏠 Home</a>
+    <h1 class="donation-brand">Dharma Jagaran UttarBanga</h1>
+    <button class="menu-btn-small" onclick="toggleMenu()">☰</button>
   </header>
 
-  <main class="container">
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="donation-mobile-menu">
+    <a href="index.html" class="active">🏠 Home</a>
+    <a href="about.html">📌 About</a>
+    <a href="issues.html">⚠️ Issues</a>
+    <a href="donation.html">❤️ Donation</a>
+    <a href="contact.html">📞 Contact</a>
+  </div>
 
-    <section class="hero">
-      <h2>!! ধর্মজাগরণ সমন্বয় , উত্তরবঙ্গ !!</h2>
-      <p class="tagline">!! জাগো এবং জাগাও !!</p>
-      <p class="subline">মতান্তরণ , জনসংখ্যা আক্রমণ ও মুসিলম এবং খ্রিষ্টান ষড়যন্ত্র</p>
+  <!-- Hero -->
+  <section class="donation-hero">
+    <h2>🕉️ ধর্মজাগরণ</h2>
+    <p>উত্তরবঙ্গ</p>
 
-      <div class="hero-buttons">
-        <a class="btn" href="issues.html">সমস্যা পড়ুন</a>
-        <a class="btn outline" href="donation.html">ডোনেশন করুন</a>
-      </div>
-    </section>
+    <div class="donation-hero-sub">
+      <b>!! ধর্মজাগরণ সমন্বয় , উত্তরবঙ্গ !!</b><br>
+      <span style="color:#ffb300; font-weight:900;">!! জাগো এবং জাগাও !!</span><br><br>
+      মতান্তরণ, জনসংখ্যা আক্রমণ ও ষড়যন্ত্রের বিরুদ্ধে<br>
+      সচেতনতা ও সংগঠিত প্রতিরোধই আমাদের লক্ষ্য।
+    </div>
+  </section>
 
-    <!-- INSTALL BOX -->
-    <section id="installBox" class="install-box">
-      <p>📲 এই ওয়েবসাইটটি আপনার মোবাইলে App হিসেবে Install করতে পারবেন।</p>
-      <button class="btn" onclick="installApp()">Install App</button>
-    </section>
+  <!-- Main -->
+  <main class="donation-container">
 
-    <section class="card">
-      <h3>!! জনসংখ্যা আক্রমণ কি !!</h3>
+    <!-- Quick Action Buttons -->
+    <section class="donation-card">
 
-      <p>
-        জনসংখ্যার গতিপ্রকৃতি এক নীরব বিপ্লব, যা জাতির ভাগ্য নির্ধারণ করে। আজ বিপদের ঘণ্টা বাজছে, কিন্তু আমরা কি তা শুনতে পাচ্ছি?
-        উদাসীনতার চাদর মুড়ি দিয়ে ভবিষ্যৎ প্রজন্মের জন্য রেখে যাচ্ছি এক অন্ধকার ভবিষ্যৎ।
-      </p>
+      <h3 style="font-size:20px; font-weight:1000; color:#ffb300; margin-bottom:12px;">
+        ⚡ Quick Actions
+      </h3>
 
-      <p>
-        আমাদের দেশ, যেখানে হিন্দু ধর্মাবলম্বীদের সংখ্যা হ্রাস পাচ্ছে, সেখানে অন্য ধর্মাবলম্বীদের সংখ্যা বাড়ছে।
-        এই পরিবর্তন কি কেবলই কাকতালীয়, নাকি সুপরিকল্পিত কোনো ছক?
-      </p>
-
-      <p>
-        জনসংখ্যা আক্রমণ, এক অদৃশ্য যুদ্ধ, যেখানে অস্ত্রের বদলে ব্যবহার করা হয় জন্মহার, ধর্মান্তরকরণ এবং অনুপ্রবেশ।
-        এর লক্ষ্য একটাই - সংখ্যা বৃদ্ধি করে ক্ষমতা দখল করা।
-      </p>
-
-      <p>
-        "জনসংখ্যাই একটি জাতির ভাগ্য" - এই সত্যটি অন্য ধর্মাবলম্বীরা উপলব্ধি করলেও, আমরা যেন ঘুমিয়ে আছি।
-        বিভাজনের ক্ষত আজও দগদগে, আর আজ সীমান্তবর্তী অঞ্চলগুলিতে জনসংখ্যার পরিবর্তন এক নতুন উদ্বেগের জন্ম দিয়েছে।
-        "মুসলিম বঙ্গভূমি" গঠনের স্বপ্ন কি সত্যিই বাস্তবায়িত হতে চলেছে?
-      </p>
-
-      <p>
-        এই নীরব বিপ্লব রুখতে আমাদের প্রয়োজন সম্মিলিত প্রচেষ্টা।
-        সরকারি পরিসংখ্যান, সামাজিক ও অর্থনৈতিক কারণ, ধর্মীয় রূপান্তর এবং সীমান্ত সুরক্ষার মতো বিষয়গুলিতে নজর দেওয়া জরুরি।
-        অন্যথায়, এই উদাসীনতার মাশুল দিতে হবে ভবিষ্যৎ প্রজন্মকে।
-      </p>
-    </section>
-
-    <section class="card">
-      <h3>শ্রদ্ধেয় স্বামী শ্রদ্ধানন্দ</h3>
-      <p>
-        জন্ম:- ২২ শে ফেব্রুয়ারী, ১৮৫৬  
-        লক্ষ লক্ষ রাজপুত মুসলমানেক তাদের আদি ধর্মে ফিরিয়ে আনার জন্য ১৯২৬ সালে ২৩শে ডিসেম্বর তাকে নির্মম ভাবে হত্যা করা হয়।
-      </p>
-    </section>
-
-    <section class="grid">
-      <div class="mini-card">
-        <h4>সমস্যা</h4>
-        <p>মতান্তরণ, জনসংখ্যা আক্রমণ ও সাংস্কৃতিক পরিবর্তনের ফলে সমাজ কাঠামো বিপন্ন।</p>
-        <a href="issues.html">বিস্তারিত →</a>
+      <div class="donation-actions">
+        <a href="about.html" class="don-btn blue">📌 About Us</a>
+        <a href="issues.html" class="don-btn orange">⚠️ Key Issues</a>
+        <a href="donation.html" class="don-btn green">❤️ Donate Now</a>
       </div>
 
-      <div class="mini-card">
-        <h4>করণীয়</h4>
-        <p>পরাবর্তন, সমাজ ঐক্য, সচেতনতা, প্রশিক্ষণ ও সেবামূলক কাজের মাধ্যমে প্রতিরোধ।</p>
-        <a href="solutions.html">বিস্তারিত →</a>
+    </section>
+
+    <!-- Featured Highlights -->
+    <section class="donation-card">
+
+      <h3 style="font-size:20px; font-weight:1000; color:#ffb300; margin-bottom:12px;">
+        🔥 আমাদের মূল লক্ষ্য
+      </h3>
+
+      <div class="donation-features">
+        <div class="feature-box">🕉️ ধর্মরক্ষা<br><span>সংস্কৃতি সংরক্ষণ</span></div>
+        <div class="feature-box">🤝 সমাজ ঐক্য<br><span>সংগঠন শক্তিশালী</span></div>
+        <div class="feature-box">🇮🇳 দেশরক্ষা<br><span>জাতীয় চেতনা</span></div>
       </div>
 
-      <div class="mini-card">
-        <h4>ডোনেশন</h4>
-        <p>দেশ ও ধর্মরক্ষার কাজে আপনার সহযোগিতা প্রয়োজন। QR Scan করে ডোনেশন করুন।</p>
-        <a href="donation.html">Donate →</a>
+      <div class="donation-warning" style="margin-top:16px;">
+        🛡️ ধর্মজাগরণ সমন্বয় হিন্দু সমাজকে ঐক্যবদ্ধ করার জন্য নিরলসভাবে কাজ করে চলেছে।
+        সেবা, সচেতনতা এবং প্রত্যাবর্তনের মাধ্যমে সমাজকে শক্তিশালী করাই আমাদের মূল উদ্দেশ্য।
       </div>
+
     </section>
+
+    <!-- Important Awareness -->
+    <section class="donation-card">
+
+      <h3 style="font-size:20px; font-weight:1000; color:#ffb300; margin-bottom:12px;">
+        🚨 জনসংখ্যা আক্রমণ কী?
+      </h3>
+
+      <p style="font-size:14px; opacity:0.9; line-height:1.9;">
+        জনসংখ্যার গতিপ্রকৃতি এক নীরব বিপ্লব, যা জাতির ভাগ্য নির্ধারণ করে।
+        আজ বিপদের ঘণ্টা বাজছে, কিন্তু আমরা কি তা শুনতে পাচ্ছি?
+        জনসংখ্যা আক্রমণ এক অদৃশ্য যুদ্ধ, যেখানে অস্ত্রের বদলে ব্যবহার করা হয় জন্মহার,
+        ধর্মান্তরকরণ এবং অনুপ্রবেশ।
+      </p>
+
+      <div class="donation-actions">
+        <a href="issues.html" class="don-btn orange">⚠️ বিস্তারিত পড়ুন</a>
+        <a href="https://wa.me/?text=জনসংখ্যা%20আক্রমণ%20একটি%20গুরুত্বপূর্ণ%20বিষয়।%20দেখুন:%20https://dong0777.github.io/dharmajagaran-uttarbanga/"
+           target="_blank" class="don-btn green">📲 Share on WhatsApp</a>
+      </div>
+
+    </section>
+
+    <!-- Swami Quotes Section -->
+    <section class="donation-card">
+
+      <h3 style="font-size:20px; font-weight:1000; color:#ffb300; margin-bottom:12px;">
+        💬 মহাপুরুষদের বাণী
+      </h3>
+
+      <div class="donation-warning">
+        <b>স্বামী বিবেকানন্দ:</b><br>
+        "একজন হিন্দু খ্রিস্টান ধর্ম গ্রহণ করলে, শুধুমাত্র একজন হিন্দুর সংখ্যাই কমে না,
+        বরং একজন শত্রুরও বৃদ্ধি হয়।"
+      </div>
+
+      <div class="donation-warning" style="margin-top:12px;">
+        <b>বীর সাভারকর:</b><br>
+        "ধর্ম পরিবর্তন মানেই জাতীয়তার পরিবর্তন।"
+      </div>
+
+      <div class="donation-warning" style="margin-top:12px;">
+        <b>আচার্য তুলসী:</b><br>
+        "ধর্মান্তর দেশের অখণ্ডতার জন্য বিপজ্জনক।"
+      </div>
+
+    </section>
+
+    <!-- Donate CTA -->
+    <section class="donation-card">
+
+      <h3 style="font-size:20px; font-weight:1000; color:#ffb300; margin-bottom:12px;">
+        ❤️ Support Our Work
+      </h3>
+
+      <p style="font-size:14px; opacity:0.9; line-height:1.9;">
+        উত্তরবঙ্গে ধর্মজাগরণ ও সমাজসেবার কাজ আরও দ্রুত গতিতে এগিয়ে নিতে
+        আপনার সহযোগিতা অত্যন্ত গুরুত্বপূর্ণ।
+      </p>
+
+      <div class="donation-actions">
+        <a href="donation.html" class="don-btn orange">❤️ Donate Now</a>
+        <a href="contact.html" class="don-btn blue">📞 Contact Us</a>
+      </div>
+
+      <div class="donation-footer-text" style="margin-top:14px;">
+        🙏 আপনার সহযোগিতাই আমাদের শক্তি
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <div class="donation-footer-text">
+      🕉️ ধর্ম বাঁচাও • সমাজ বাঁচাও • দেশ বাঁচাও 🇮🇳
+    </div>
 
   </main>
 
-  <footer class="footer">
-    <p>© ধর্মজাগরণ সমন্বয়, উত্তরবঙ্গ | Powered by GitHub Pages + PWA</p>
-  </footer>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mobileMenu");
+      menu.classList.toggle("show");
+    }
+  </script>
 
-  <script src="assets/app.js"></script>
 </body>
 </html>
