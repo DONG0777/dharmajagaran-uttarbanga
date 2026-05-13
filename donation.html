@@ -1,58 +1,55 @@
-<section class="card">
-  <h3>📲 UPI Donation (Fast & Secure)</h3>
+<section class="card donation-upi">
+  <h3 class="donation-title">📲 UPI Donation (Fast & Secure)</h3>
 
-  <p>
-    নিচের QR Code স্ক্যান করে সহজেই ডোনেশন করতে পারবেন।
-    Google Pay / PhonePe / Paytm / BHIM UPI সব supported।
+  <p class="donation-subtitle">
+    নিচের QR Code স্ক্যান করে সহজেই ডোনেশন করতে পারবেন।  
+    <b>Google Pay / PhonePe / Paytm / BHIM UPI</b> সব supported।
   </p>
 
-  <div class="contact-box" style="text-align:center;">
-    <p style="font-size:15px;">
-      <b>Merchant Name:</b>
-      <span style="color:#ffb300;">UTTARBANGA DHARMA JAGARAN</span>
+  <div class="upi-box">
+
+    <p class="merchant-label">Merchant Name</p>
+    <p class="merchant-name">UTTARBANGA DHARMA JAGARAN</p>
+
+    <div class="upi-id-row">
+      <div class="upi-id-text">
+        <p class="upi-label">UPI ID</p>
+        <p class="upi-id">ubdjt@sbi</p>
+      </div>
+
+      <button class="btn copy-btn" onclick="copyUPI()">📋 Copy</button>
+    </div>
+
+    <div class="qr-frame">
+      <img 
+        src="assets/upi-qr.webp"
+        alt="UTTARBANGA DHARMA JAGARAN UPI QR Code"
+        loading="lazy"
+        class="qr-img"
+      />
+    </div>
+
+    <p class="qr-note">
+      📌 QR Scan করলেই Payment হবে।  
+      <br>যদি App না খোলে তাহলে <b>UPI ID Copy</b> করে manually paste করুন।
     </p>
 
-    <p style="font-size:16px; margin-top:8px;">
-      <b>UPI ID:</b>
-      <span style="color:#00e676;">ubdjt@sbi</span>
+    <div class="hero-buttons donation-buttons">
+      <a class="btn outline" href="assets/upi-qr.webp" target="_blank">
+        📷 Open QR
+      </a>
+
+      <a class="btn outline" href="upi://pay?pa=ubdjt@sbi&pn=UTTARBANGA%20DHARMA%20JAGARAN&cu=INR">
+        💸 Direct Pay
+      </a>
+    </div>
+
+    <p class="warning-note">
+      ⚠️ Direct Pay কিছু মোবাইলে কাজ নাও করতে পারে।  
+      QR Scan বা Copy UPI সবচেয়ে reliable।
     </p>
 
-    <img 
-      src="assets/upi-qr.webp" 
-      alt="UTTARBANGA DHARMA JAGARAN UPI QR Code"
-      loading="lazy"
-      style="
-        max-width:280px;
-        width:100%;
-        border-radius:18px;
-        border:2px solid rgba(255, 179, 0, 0.45);
-        margin-top:14px;
-        box-shadow: 0 14px 30px rgba(0,0,0,0.55);
-      "
-    />
-
-    <p class="note" style="margin-top:12px;">
-      ⚡ QR Scan করলেই Payment হবে। <br>
-      যদি App না খোলে তাহলে UPI ID copy করে manually paste করুন।
-    </p>
   </div>
-
-  <div class="hero-buttons" style="margin-top:14px;">
-    <button class="btn" onclick="copyUPI()">📋 Copy UPI ID</button>
-
-    <a class="btn outline" href="assets/upi-qr.webp" target="_blank">
-      📷 Open QR
-    </a>
-
-    <a class="btn outline" href="upi://pay?pa=ubdjt@sbi&pn=UTTARBANGA%20DHARMA%20JAGARAN&cu=INR">
-      💸 Try Direct Pay
-    </a>
-  </div>
-
-  <p class="note">
-    ⚠️ Direct Pay button কিছু মোবাইলে কাজ নাও করতে পারে।  
-    সবচেয়ে reliable হচ্ছে QR Scan বা Copy UPI ID।
-  </p>
 </section>
 
 <script>
