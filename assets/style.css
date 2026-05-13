@@ -1,383 +1,131 @@
-:root {
-  --bg: #0b0b0b;
-  --card: #141414;
-  --card2: #191919;
-  --text: #f5f5f5;
-  --muted: #c7c7c7;
-  --accent: #ff7a00;
-  --accent2: #ffb300;
-  --border: rgba(255, 255, 255, 0.08);
-  --shadow: rgba(0, 0, 0, 0.35);
-  --radius: 18px;
+/* ================================
+   DONATION PAGE (UPI QR PRO STYLE)
+================================ */
+
+.donation-upi {
+  text-align: center;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-}
-
-body {
-  background: radial-gradient(circle at top left, rgba(255, 122, 0, 0.10), transparent 55%),
-              radial-gradient(circle at bottom right, rgba(255, 179, 0, 0.08), transparent 60%),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.75;
-}
-
-a {
-  color: var(--accent2);
-  text-decoration: none;
-}
-
-.container {
-  width: min(1100px, 92%);
-  margin: auto;
-  padding: 22px 0;
-}
-
-/* HEADER */
-.topbar {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: rgba(10, 10, 10, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  padding: 14px 14px;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.logo {
-  font-size: 30px;
-  background: rgba(255, 122, 0, 0.12);
-  border: 1px solid rgba(255, 122, 0, 0.35);
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-}
-
-.brand-text h1 {
-  font-size: 16px;
-  letter-spacing: 0.4px;
+.donation-title {
+  text-align: center;
+  font-size: 22px;
   font-weight: 900;
-}
-
-.brand-text p {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-/* MENU BUTTON */
-.menu-btn {
-  margin-left: auto;
-  display: none;
-  background: rgba(255, 122, 0, 0.12);
-  border: 1px solid rgba(255, 122, 0, 0.35);
-  color: var(--accent2);
-  padding: 10px 14px;
-  border-radius: 14px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-/* DESKTOP NAV */
-.nav {
-  margin-top: 12px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.nav a {
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  font-size: 13px;
-  color: var(--text);
-  opacity: 0.92;
-  transition: 0.2s ease;
-}
-
-.nav a:hover {
-  border-color: rgba(255, 179, 0, 0.4);
-  transform: translateY(-1px);
-}
-
-.nav a.active {
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  border: none;
-  color: #111;
-  font-weight: 900;
-}
-
-/* MOBILE NAV */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: var(--radius);
-  border: 1px solid var(--border);
-  background: rgba(0,0,0,0.65);
-}
-
-.mobile-nav a {
-  padding: 10px 14px;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-  font-weight: 800;
-  color: var(--text);
-}
-
-.mobile-nav a.active {
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  color: #111;
-  border: none;
-}
-
-.mobile-nav.open {
-  display: flex;
-}
-
-/* HERO */
-.hero {
-  padding: 26px 18px;
-  border-radius: var(--radius);
-  background: linear-gradient(180deg, rgba(255, 122, 0, 0.12), rgba(255, 179, 0, 0.04)),
-              var(--card);
-  border: 1px solid rgba(255, 122, 0, 0.25);
-  box-shadow: 0 12px 30px var(--shadow);
-}
-
-.hero h2 {
-  font-size: 24px;
-  margin-bottom: 6px;
-  font-weight: 900;
-}
-
-.tagline {
-  font-size: 16px;
-  color: var(--accent2);
-  font-weight: 900;
-}
-
-.subline {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 16px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  color: #111;
-  padding: 10px 16px;
-  border-radius: 14px;
-  font-weight: 900;
-  display: inline-block;
-  border: none;
-  transition: 0.2s ease;
-  cursor: pointer;
-}
-
-.btn:hover {
-  transform: translateY(-1px);
-}
-
-.btn.outline {
-  background: transparent;
-  border: 1px solid rgba(255, 122, 0, 0.6);
-  color: var(--accent2);
-}
-
-/* INSTALL BOX */
-.install-box {
-  display: none;
-  margin-top: 18px;
-  padding: 16px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 122, 0, 0.25);
-  background: rgba(255, 122, 0, 0.10);
-}
-
-.install-box p {
-  margin-bottom: 12px;
-  font-weight: 800;
-  color: #f0f0f0;
-}
-
-/* PAGE TITLE */
-.page-title {
-  margin-top: 6px;
-  padding: 12px 2px;
-}
-
-.page-title h2 {
-  font-size: 24px;
-  margin-bottom: 6px;
-  font-weight: 900;
-}
-
-.page-title p {
-  color: var(--muted);
-}
-
-/* CARDS */
-.card {
-  margin-top: 18px;
-  padding: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(0,0,0,0)),
-              var(--card2);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.25);
-}
-
-.card h3 {
-  margin-bottom: 10px;
-  color: var(--accent2);
-  font-weight: 900;
-}
-
-.card h4 {
-  margin-top: 14px;
-  margin-bottom: 6px;
-  font-weight: 900;
-}
-
-.card p {
-  margin-bottom: 12px;
-  color: #e7e7e7;
-  font-size: 15px;
-}
-
-.card ul {
-  padding-left: 18px;
-  margin-top: 10px;
-  margin-bottom: 12px;
-}
-
-.card ul li {
-  margin-bottom: 6px;
-}
-
-/* GRID */
-.grid {
-  margin-top: 18px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 14px;
-}
-
-.mini-card {
-  padding: 16px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  transition: 0.2s ease;
-}
-
-.mini-card:hover {
-  transform: translateY(-2px);
-  border-color: rgba(255, 179, 0, 0.35);
-}
-
-.mini-card h4 {
-  color: var(--accent2);
   margin-bottom: 8px;
-  font-weight: 900;
 }
 
-.mini-card p {
-  color: var(--muted);
+.donation-subtitle {
+  text-align: center;
   font-size: 14px;
-  margin-bottom: 10px;
+  opacity: 0.9;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
-.mini-card a {
+.upi-box {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 22px;
+  padding: 18px;
+  text-align: center;
+}
+
+.merchant-label {
+  font-size: 13px;
+  opacity: 0.8;
+  margin-bottom: 6px;
+}
+
+.merchant-name {
+  font-size: 18px;
   font-weight: 900;
-}
-
-/* BLOCKQUOTE */
-blockquote {
-  padding: 14px;
-  border-left: 4px solid var(--accent);
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 14px;
+  color: #ffb300;
   margin-bottom: 14px;
 }
 
-/* CONTACT BOX */
-.contact-box {
-  margin-top: 12px;
-  padding: 14px;
+.upi-id-row {
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.upi-id-text {
+  text-align: left;
+  flex: 1;
+  min-width: 200px;
+}
+
+.upi-label {
+  margin: 0;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.upi-id {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 900;
+  color: #00e676;
+}
+
+.copy-btn {
+  padding: 10px 14px !important;
+  font-size: 13px !important;
   border-radius: 14px;
-  border: 1px solid var(--border);
-  background: rgba(255, 255, 255, 0.03);
 }
 
-.contact-box p {
-  margin-bottom: 8px;
-  font-size: 14px;
-  color: #e7e7e7;
+.qr-frame {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 12px;
+  display: inline-block;
+  border: 2px solid rgba(255, 179, 0, 0.55);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.6);
 }
 
-/* NOTE */
-.note {
-  margin-top: 10px;
+.qr-img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  display: block;
+}
+
+.qr-note {
+  margin-top: 14px;
   font-size: 13px;
-  color: var(--muted);
+  opacity: 0.88;
+  line-height: 1.6;
 }
 
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 18px;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  margin-top: 30px;
-  font-size: 13px;
+.donation-buttons {
+  justify-content: center;
+  margin-top: 16px;
 }
 
-/* MOBILE OPTIMIZATION */
-@media (max-width: 700px) {
-  .nav {
-    display: none;
+.warning-note {
+  margin-top: 12px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+/* Mobile Fine Tuning */
+@media (max-width: 500px) {
+  .merchant-name {
+    font-size: 16px;
   }
 
-  .menu-btn {
-    display: block;
+  .upi-id {
+    font-size: 15px;
   }
 
-  .hero h2 {
-    font-size: 20px;
-  }
-
-  .page-title h2 {
-    font-size: 20px;
-  }
-
-  .card {
-    padding: 16px;
-  }
-
-  .card p {
-    font-size: 14px;
+  .qr-img {
+    max-width: 280px;
   }
 }
